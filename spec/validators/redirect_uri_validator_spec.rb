@@ -1,6 +1,6 @@
 require 'spec_helper_integration'
 
-describe RedirectUriValidator do
+describe Doorkeeper::Validators::RedirectUriValidator do
   subject do
     FactoryGirl.create(:application)
   end

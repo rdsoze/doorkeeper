@@ -24,7 +24,6 @@ module Doorkeeper
     autoload :Authorization,              "doorkeeper/oauth/authorization"
     autoload :CodeRequest,                "doorkeeper/oauth/code_request"
     autoload :TokenRequest,               "doorkeeper/oauth/token_request"
-    autoload :Client,                     "doorkeeper/oauth/client"
     autoload :Token,                      "doorkeeper/oauth/token"
 
     module Helpers
@@ -62,3 +61,7 @@ module Doorkeeper
     configured? && database_installed?
   end
 end
+
+require 'doorkeeper/validators/redirect_uri_validator'
+binding.pry
+require 'doorkeeper/oauth/client'
